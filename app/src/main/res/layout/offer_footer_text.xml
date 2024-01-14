@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="@dimen/dp_4"
+    app:cardUseCompatPadding="true"
+    android:outlineProvider="none"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:cardBackgroundColor="@color/lightBlue">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOfferName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp_6"
+        android:paddingVertical="@dimen/dp_2"
+        android:fontFamily="@font/mazzard_m_medium"
+        tools:text="@string/app_name" />
+</com.google.android.material.card.MaterialCardView>

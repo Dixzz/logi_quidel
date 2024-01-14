@@ -4,6 +4,7 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class Restaurant(
+    val additional_offer: String = "",
     val display_distance: String,
     val image_url: String,
     val name: String,

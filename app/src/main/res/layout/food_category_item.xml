@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.loginext.quidel.models.home.FoodCategory" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mvCategory"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:outlineProvider="none"
+            app:cardCornerRadius="40dp"
+            tools:cardBackgroundColor="@color/lightBlue">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mazzard_h_medium"
+            tools:text="@string/app_name"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="@{item.name}" />
+    </LinearLayout>
+</layout>

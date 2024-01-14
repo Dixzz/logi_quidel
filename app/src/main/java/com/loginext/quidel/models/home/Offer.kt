@@ -13,8 +13,8 @@ annotation class HexColor
 @JsonClass(generateAdapter = true)
 data class Offer(
     val name: String,// deal $1
-    @HexColor val background: Int = Color.WHITE, //hex e.g: FF00FF
-    @HexColor val textcolor: Int = Color.BLACK, //hex
+    @HexColor val background: Int = Color.GRAY, //hex e.g: FF00FF
+    @HexColor val textcolor: Int = Color.WHITE, //hex
 ) {
 
     class ColorJsonAdapter {

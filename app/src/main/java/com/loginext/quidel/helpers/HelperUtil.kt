@@ -1,5 +1,6 @@
 package com.loginext.quidel.helpers
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.res.Resources
@@ -21,6 +22,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.annotation.DimenRes
 import androidx.annotation.DrawableRes
 import androidx.lifecycle.MutableLiveData
+import androidx.recyclerview.widget.DiffUtil
 import com.loginext.quidel.BuildConfig
 import com.loginext.quidel.models.AutoResolver
 import kotlinx.coroutines.async
@@ -86,13 +88,23 @@ fun Number.toPx() = TypedValue.applyDimension(
     this.toFloat(),
     Resources.getSystem().displayMetrics
 )
+fun <T : Any> diffUtil(onContentsSame: ((T, T) -> Boolean)? = null, onItemSame: (T, T) -> Boolean) =
+    object : DiffUtil.ItemCallback<T>() {
+        override fun areItemsTheSame(oldItem: T, newItem: T): Boolean {
+            return onItemSame(oldItem, newItem)
+        }
 
+        @SuppressLint("DiffUtilEquals")
+        override fun areContentsTheSame(oldItem: T, newItem: T): Boolean {
+            return onContentsSame?.invoke(oldItem, newItem) ?: (oldItem == newItem)
+        }
+    }
 infix fun Context.showToast(msg: Any?) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
-        Toast.makeText(this, msg.toString(), Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, msg.toString(), Toast.LENGTH_LONG).show()
     } else {
         Handler(Looper.getMainLooper()).post {
-            Toast.makeText(this, msg.toString(), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, msg.toString(), Toast.LENGTH_LONG).show()
         }
     }
 }

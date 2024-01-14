@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.loginext.quidel.models.home.OfferCollection" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:strokeColor="#E1E1E1"
+        app:cardCornerRadius="6dp"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                android:layout_width="100dp"
+                android:scaleType="centerCrop"
+                android:layout_height="60dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:text="@{item.name}"
+                android:layout_marginEnd="@dimen/dp_40"
+                android:fontFamily="@font/mazzard_h_bold"
+                android:textAllCaps="true"
+                tools:text="@string/app_name" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

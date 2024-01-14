@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.TummocLineChecker" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.TummocLineChecker" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryVariant">@color/colorPrimary</item>
@@ -12,9 +12,26 @@
 
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="android:statusBarColor">@color/red</item>
+        <item name="android:navigationBarColor">@color/white</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:textAppearanceLarge">@style/TextAppearance.Large</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearance.Medium</item>
+        <item name="android:textAppearanceSmall">@style/TextAppearance.Small</item>
+
     </style>
 
+    <style name="TextAppearance.Large" parent="TextAppearance.AppCompat.Large">
+        <item name="fontFamily">@font/mazzard_h_medium</item>
+    </style>
+
+    <style name="TextAppearance.Medium" parent="TextAppearance.AppCompat.Body1">
+        <item name="fontFamily">@font/mazzard_m_medium</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="TextAppearance.Small" parent="TextAppearance.AppCompat.Small">
+        <item name="fontFamily">@font/mazzard_m_regular</item>
+    </style>
 </resources>
