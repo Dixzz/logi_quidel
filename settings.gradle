@@ -1,0 +1,2 @@
+rootProject.name = "Loginext Restro"
+include ':app'

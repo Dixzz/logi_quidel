@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/darkBlue</color>
+    <color name="colorPrimaryDark">@color/darkBlue</color>
+    <color name="colorAccent">@color/lightBlueTwo</color>
+    <color name="statusBarColor">#2562CF</color>
+
+    <!-- UI revamp colours -->
+    <color name="darkBlue">#1F55B6</color>
+    <color name="lightBlue">#11BBC3</color>
+    <color name="lightBlueTwo">#11B4BC</color>
+    <color name="selectedLightBlue">#E4F7F8</color>
+
+    <color name="green">#009518</color>
+    <color name="yellow">#FFA900</color>
+    <color name="orange">#FF6F00</color>
+    <color name="red">#CC0000</color>
+
+    <color name="textColorSecondary">#868686</color>
+    <color name="textColorSecondary2">#D3D3D3</color>
+    <color name="grayE5">#E5E5E5</color>
+    <color name="grayB6">#B6B6B6</color>
+    <color name="gray4D">#4d4d4d</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="divider">#B6B6B6</color>
+    <color name="divider2">#E6E6E6</color>
+
+    <color name="colorGrey42">#424242</color>
+    <color name="primary_color_2_light_green">#DCEBC4</color>
+
+    <color name="colorGrey75">#757575</color>
+    <color name="redLight">#FF8585</color>
+    <color name="disabled">#808080</color>
+    <color name="divider4D0E2D39">#4D0E2D39</color>
+    <color name="gray35">#353535</color>
+    <color name="black_alpha50">#80000000</color>
+
+
+</resources>
