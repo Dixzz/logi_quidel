@@ -1,8 +1,10 @@
 package com.loginext.quidel.ui.activities.home
 
+import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.loginext.quidel.helpers.CountingIdlingResourceHelper
 import com.loginext.quidel.helpers.asLiveData
 import com.loginext.quidel.models.AutoResolver
 import com.loginext.quidel.models.home.HomeComponentResponse
@@ -31,6 +33,7 @@ class HomeViewModel @Inject constructor(
     val homeComponent = MutableLiveData<AutoResolver<HomeComponentResponse>>()
 
     fun getHomeComponents() {
+        CountingIdlingResourceHelper.increment()
         homeComponent.postValue(AutoResolver.loading())
         viewModelScope.launch(scope) {
             val data = homeRepo.homeScreenComponents()
@@ -38,6 +41,7 @@ class HomeViewModel @Inject constructor(
                 it.priority
             }
             homeComponent.postValue(AutoResolver.success(data))
+            CountingIdlingResourceHelper.decrement()
         }
     }
 }

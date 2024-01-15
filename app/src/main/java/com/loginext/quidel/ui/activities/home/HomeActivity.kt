@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.animation.AnticipateInterpolator
 import androidx.activity.viewModels
+import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -38,7 +39,8 @@ import java.util.Locale
 @AndroidEntryPoint
 class HomeActivity : BaseActivityBinding<ActivityHomeBinding>(ActivityHomeBinding::inflate) {
 
-    private val homeViewModel by viewModels<HomeViewModel>()
+    @VisibleForTesting
+    val homeViewModel by viewModels<HomeViewModel>()
     private fun hideSystemUI() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
