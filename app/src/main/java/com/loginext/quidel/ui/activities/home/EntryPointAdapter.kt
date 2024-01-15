@@ -98,7 +98,6 @@ class BannerAdapter @Inject constructor(
         with(p0.binding) {
 
             Glide.with(image).load(item.image_url)
-                .transition(DrawableTransitionOptions.withCrossFade())
                 .placeholder(R.drawable.ic_plate)
                 .error(R.drawable.ic_placeholder)
                 .into(image)
